@@ -34,7 +34,7 @@ class _MainScreenState extends State<MainScreen> {
     Job(
       id: 1,
       title: "Catering",
-      company: "No of  members : 5",
+      requirement: "No of  members : 5",
       location: "peddapuram",
       amount: "₹400",
       timings: "8:00 AM - 12:00 PM",
@@ -43,7 +43,7 @@ class _MainScreenState extends State<MainScreen> {
     Job(
       id: 2,
       title: "House shifting",
-      company: "No of  members : 2",
+      requirement: "No of  members : 2",
       location: "Kakinada",
       amount: "₹600",
       timings: "10:00 AM - 7:00 PM",
@@ -52,7 +52,7 @@ class _MainScreenState extends State<MainScreen> {
     Job(
       id: 3,
       title: "Tuition for 10th student",
-      company: "No of p members : 1",
+      requirement: "No of p members : 1",
       location: "Rajahmundry",
       amount: "₹2000/month",
       timings: "5:00 AM - 8:30 PM",
@@ -61,7 +61,7 @@ class _MainScreenState extends State<MainScreen> {
     Job(
       id: 4,
       title: "Server for restaurant",
-      company: " No of members : 2",
+      requirement: " No of members : 2",
       location: "pithapuram",
       amount: "₹3000/month",
       timings: "5:00 PM - 11:00 PM",
@@ -70,7 +70,7 @@ class _MainScreenState extends State<MainScreen> {
     Job(
       id: 5,
       title: "Catering",
-      company: "No of  members : 6",
+      requirement: "No of  members : 6",
       location: "Surampalem",
       amount: "₹700",
       timings: "9:00 AM - 6:00 PM",
@@ -79,7 +79,7 @@ class _MainScreenState extends State<MainScreen> {
     Job(
       id: 6,
       title: "Helper for fancy store",
-      company: "No of members : 1",
+      requirement: "No of members : 1",
       location: "peddapuram",
       amount: "₹4000/month",
       timings: "9:30 AM - 6:30 PM",
@@ -88,7 +88,7 @@ class _MainScreenState extends State<MainScreen> {
     Job(
       id: 7,
       title: "Catering",
-      company: "No of persond : 6",
+      requirement: "No of members : 6",
       location: "Kakinada",
       amount: "₹700",
       timings: "9:00 AM - 6:00 PM",
@@ -97,7 +97,7 @@ class _MainScreenState extends State<MainScreen> {
     Job(
       id: 8,
       title: "Content Writer",
-      company: "No of persond : 1",
+      requirement: "No of members : 1",
       location: "Rajahmundry",
       amount: "₹1200",
       timings: "10:00 AM - 7:00 PM",
@@ -282,7 +282,7 @@ class _MainScreenState extends State<MainScreen> {
                                             ),
                                             const SizedBox(height: 4),
                                             Text(
-                                              job.company,
+                                              job.requirement,
                                               style: TextStyle(
                                                 fontSize: 14,
                                                 color: Colors.grey[600],

@@ -135,7 +135,7 @@ class Applicants extends StatelessWidget {
                                           ),
                                           const SizedBox(height: 4),
                                           Text(
-                                            job.company,
+                                            job.requirement,
                                             style: TextStyle(
                                               fontSize: 14,
                                               color: Colors.grey[600],
