@@ -19,7 +19,7 @@ class CreateJobForm extends StatefulWidget {
 class _CreateJobFormState extends State<CreateJobForm> {
   final _formKey = GlobalKey<FormState>();
   final _titleController = TextEditingController();
-  final _companyController = TextEditingController();
+  final _requirementController = TextEditingController();
   final _locationController = TextEditingController();
   final _amountController = TextEditingController();
   final _timingsController = TextEditingController();
@@ -28,7 +28,7 @@ class _CreateJobFormState extends State<CreateJobForm> {
   @override
   void dispose() {
     _titleController.dispose();
-    _companyController.dispose();
+    _requirementController.dispose();
     _locationController.dispose();
     _amountController.dispose();
     _timingsController.dispose();
@@ -91,9 +91,9 @@ class _CreateJobFormState extends State<CreateJobForm> {
                 ),
                 const SizedBox(height: 16),
                 TextFormField(
-                  controller: _companyController,
+                  controller: _requirementController,
                   decoration: InputDecoration(
-                    labelText: "Company Name",
+                    labelText: "requirement Name",
                     prefixIcon: const Icon(Icons.business),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
@@ -103,7 +103,7 @@ class _CreateJobFormState extends State<CreateJobForm> {
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please enter company name';
+                      return 'Please enter requirement name';
                     }
                     return null;
                   },
@@ -215,7 +215,7 @@ class _CreateJobFormState extends State<CreateJobForm> {
                 final newJob = Job(
                   id: widget.nextJobId,
                   title: _titleController.text,
-                  company: _companyController.text,
+                  requirement: _requirementController.text,
                   location: _locationController.text,
                   amount: _amountController.text,
                   timings: _timingsController.text,

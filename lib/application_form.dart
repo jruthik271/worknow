@@ -94,7 +94,7 @@ class _ApplicationFormPageState extends State<ApplicationFormPage> {
                               ),
                             ),
                             Text(
-                              "${widget.job.company} • ${widget.job.location}",
+                              "${widget.job.requirement} • ${widget.job.location}",
                               style: TextStyle(
                                 fontSize: 14,
                                 color: Colors.grey[600],

@@ -36,7 +36,7 @@ class _MyWidgetState extends State<MyWidget> {
   void _showCreateJobDialog() {
     
     final titleController = TextEditingController();
-    final companyController = TextEditingController();
+    final requirementController = TextEditingController();
     final locationController = TextEditingController();
     final amountController = TextEditingController();
     final timingsController = TextEditingController();
@@ -68,9 +68,9 @@ class _MyWidgetState extends State<MyWidget> {
                 const SizedBox(height: 12),
                 TextFormField(
                   
-                  controller: companyController,
+                  controller: requirementController,
                   decoration: const InputDecoration(
-                    labelText: 'Company',
+                    labelText: 'requirement',
                     border: OutlineInputBorder(),
                   ),
                   validator: (value) => value!.isEmpty ? 'Required' : null,
@@ -127,7 +127,7 @@ class _MyWidgetState extends State<MyWidget> {
                 final newJob = Job(
                   id: createdJobs.length + 100,
                   title: titleController.text,
-                  company: companyController.text,
+                  requirement: requirementController.text,
                   location: locationController.text,
                   amount: amountController.text,
                   timings: timingsController.text,

@@ -197,7 +197,7 @@ class WorkerProfileScreen extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            "${jobCreated.job.company} - ${jobCreated.job.location}",
+                            "${jobCreated.job.requirement} - ${jobCreated.job.location}",
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.grey[600],

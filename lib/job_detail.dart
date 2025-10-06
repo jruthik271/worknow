@@ -156,7 +156,7 @@ class _JobDetailsPageState extends State<JobDetailsPage> {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      widget.job.company,
+                      widget.job.requirement,
                       style: TextStyle(
                         fontSize: 18,
                         color: Colors.grey[600],
