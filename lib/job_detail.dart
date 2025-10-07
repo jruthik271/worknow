@@ -52,10 +52,8 @@ class _JobDetailsPageState extends State<JobDetailsPage> {
       appliedDate: DateTime.now(),
     );
 
-    // Submit the application
     widget.onApply(application);
 
-    // Show success pop-up
     showDialog(
                         context: context,
                         builder: (BuildContext context) {
@@ -156,7 +154,7 @@ class _JobDetailsPageState extends State<JobDetailsPage> {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      widget.job.company,
+                      widget.job.requirement,
                       style: TextStyle(
                         fontSize: 18,
                         color: Colors.grey[600],

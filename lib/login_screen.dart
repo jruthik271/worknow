@@ -6,7 +6,7 @@ import 'package:worknow/bottom_navi.dart';
 void main() {
   runApp(
     DevicePreview(
-      enabled: true, // turn off in production
+      enabled: true, 
       builder: (context) => const WorkNow(),
     ),
   );
@@ -41,7 +41,7 @@ class _UserLoginScreenState extends State<UserLoginScreen> {
   bool _isPasswordVisible = false;
   bool _isLoading = false;
 
-  // Valid users database
+  
   final Map<String, String> _users = {
     '24p35a4203': '123456',
     '24p35a4233': 'aditya@123',
@@ -91,16 +91,7 @@ class _UserLoginScreenState extends State<UserLoginScreen> {
     return Scaffold(
       backgroundColor: Colors.lightBlue.shade100,
       body: Stack(
-        children: [
-          
-          // Image.asset(
-          //   'assets/logo_mbl.png',
-          //   fit: BoxFit.cover,
-          //   width: double.infinity,
-          //   height: double.infinity,
-          // ),
-
-          
+        children: [  
           Center(
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
@@ -123,7 +114,7 @@ class _UserLoginScreenState extends State<UserLoginScreen> {
                         SizedBox(
                           height: 80,
                           child: Image.network(
-                            'https://cdn-icons-png.flaticon.com/512/3135/3135715.png', // Example logo
+                            'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
                             fit: BoxFit.contain,
                           ),
                         ),
@@ -202,8 +193,6 @@ class _UserLoginScreenState extends State<UserLoginScreen> {
                           },
                         ),
                         const SizedBox(height: 25),
-
-                        // Login Button
                         SizedBox(
                           width: double.infinity,
                           height: 50,

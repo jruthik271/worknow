@@ -2,7 +2,7 @@
 class Job {
   final int id;
   final String title;
-  final String company;
+  final String requirement;
   final String location;
   final String amount;
   final String timings;
@@ -12,7 +12,7 @@ class Job {
   const Job({
     required this.id,
     required this.title,
-    required this.company,
+    required this.requirement,
     required this.location,
     required this.amount,
     required this.timings,

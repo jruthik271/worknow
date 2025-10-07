@@ -94,7 +94,7 @@ class _ApplicationFormPageState extends State<ApplicationFormPage> {
                               ),
                             ),
                             Text(
-                              "${widget.job.company} • ${widget.job.location}",
+                              "${widget.job.requirement} • ${widget.job.location}",
                               style: TextStyle(
                                 fontSize: 14,
                                 color: Colors.grey[600],
@@ -151,10 +151,7 @@ class _ApplicationFormPageState extends State<ApplicationFormPage> {
                     if (value == null || value.isEmpty) {
                       return 'Please enter your email';
                     }
-                    // if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4})
-                    //     .hasMatch(value)) ){
-                    //   return 'Please enter a valid email';
-                    // }
+                  
                     return null;
                   },
                 ),
