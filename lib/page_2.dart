@@ -21,7 +21,7 @@ class _WorkersState extends State<Workers> {
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg0i5ClQLFDhg4UHZ0ZxbItAD4rSmeRmeriQ&s",
     },
     {
-      "name": "Jagguuu Relagi",
+      "name": "Jaggu Relangi",
       "role": "Daily Wages Worker",
       "age": "22",
       "location": "Vizag",
@@ -184,6 +184,7 @@ class _WorkersState extends State<Workers> {
           final profile = profiles[index];
           final ratingValue = rating();
           return Card(
+            color: Colors.white,
             margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15),
@@ -192,6 +193,7 @@ class _WorkersState extends State<Workers> {
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
+                
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
@@ -251,7 +253,7 @@ class _WorkersState extends State<Workers> {
                           color: profile["status"] == "available"
                               ? Colors.green
                               : Colors.red,
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(12),
                         ),
                         child: Center(
                           child: Text(
