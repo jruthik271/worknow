@@ -52,10 +52,8 @@ class _JobDetailsPageState extends State<JobDetailsPage> {
       appliedDate: DateTime.now(),
     );
 
-    // Submit the application
     widget.onApply(application);
 
-    // Show success pop-up
     showDialog(
                         context: context,
                         builder: (BuildContext context) {

@@ -1,4 +1,3 @@
-// MultipleFiles/create_job_form.dart
 import 'package:flutter/material.dart';
 import 'package:worknow/job.dart';
 
@@ -220,10 +219,10 @@ class _CreateJobFormState extends State<CreateJobForm> {
                   amount: _amountController.text,
                   timings: _timingsController.text,
                   about: _aboutController.text,
-                  creatorId: 'user123', // Assign current user as creator
+                  creatorId: 'user123',
                 );
                 widget.onJobCreated(newJob);
-                Navigator.pop(context); // Go back to the previous screen
+                Navigator.pop(context);
                 
               }
             },

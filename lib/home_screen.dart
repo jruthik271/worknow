@@ -35,7 +35,7 @@ class _MainScreenState extends State<MainScreen> {
       id: 1,
       title: "Catering",
       requirement: "No of  members : 5",
-      location: "peddapuram",
+      location: "Peddapuram",
       amount: "₹400",
       timings: "8:00 AM - 12:00 PM",
       about: "planning, preparing, delivering, and serving food and beverages for special events and clients at various locations. ",
@@ -52,17 +52,17 @@ class _MainScreenState extends State<MainScreen> {
     Job(
       id: 3,
       title: "Tuition for 10th student",
-      requirement: "No of p members : 1",
+      requirement: "No of members : 1",
       location: "Rajahmundry",
       amount: "₹2000/month",
       timings: "5:00 AM - 8:30 PM",
-      about: "To teach and boubts clarification for 10th class student.",
+      about: "To teach and doubts clarification for 10th class student.",
     ),
     Job(
       id: 4,
       title: "Server for restaurant",
       requirement: " No of members : 2",
-      location: "pithapuram",
+      location: "Pithapuram",
       amount: "₹3000/month",
       timings: "5:00 PM - 11:00 PM",
       about: "Take orders and Serve to customers.",
@@ -80,7 +80,7 @@ class _MainScreenState extends State<MainScreen> {
       id: 6,
       title: "Helper for fancy store",
       requirement: "No of members : 1",
-      location: "peddapuram",
+      location: "Peddapuram",
       amount: "₹4000/month",
       timings: "9:30 AM - 6:30 PM",
       about: "Offering dedicated help to manage and grow your fancy store smoothly and efficiently.",
@@ -107,15 +107,10 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Combine predefined and created jobs
     final allJobs = [...predefinedJobs, ...widget.createdJobs.map((cj) => cj.job)];
-
-    // Filter jobs by selected location
     final filteredJobs = selectedLocation == "All Locations"
         ? allJobs
         : allJobs.where((job) => job.location == selectedLocation).toList();
-
-    // Check if a job is applied
     bool isJobApplied(Job job) {
       return widget.appliedJobs.any((app) => app.job.id == job.id);
     }
@@ -125,7 +120,6 @@ class _MainScreenState extends State<MainScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            // Header with title and location dropdown
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Row(
@@ -165,8 +159,6 @@ class _MainScreenState extends State<MainScreen> {
                 ],
               ),
             ),
-
-            // Jobs count text
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Align(
@@ -183,8 +175,6 @@ class _MainScreenState extends State<MainScreen> {
             ),
 
             const SizedBox(height: 16),
-
-            // Job list or empty state
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
