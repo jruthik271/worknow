@@ -15,7 +15,7 @@ class _WorkersState extends State<Workers> {
       "role": "Student",
       "age": "20",
       "location": "Rayavaram",
-      "status": "available",
+      "status": "Available",
       "phone": "9876543210",
       "image":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg0i5ClQLFDhg4UHZ0ZxbItAD4rSmeRmeriQ&s",
@@ -35,11 +35,21 @@ class _WorkersState extends State<Workers> {
       "role": "Student",
       "age": "21",
       "location": "Pithapuram",
-      "status": "available",
+      "status": "Available",
       "phone": "9876543333",
       "image":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg0i5ClQLFDhg4UHZ0ZxbItAD4rSmeRmeriQ&s",
     },
+    {
+       "name": "Shalem",
+      "role": "Student",
+      "age": "19",
+      "location": "Kakinada",
+      "status": "Available",
+      "phone": "9876543333",
+      "image":
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg0i5ClQLFDhg4UHZ0ZxbItAD4rSmeRmeriQ&s",
+    }
   ];
 
   int rating() {
@@ -55,7 +65,7 @@ class _WorkersState extends State<Workers> {
     final TextEditingController locationController = TextEditingController();
     final TextEditingController phoneController = TextEditingController();
     final TextEditingController imageController = TextEditingController();
-    String status = 'available';
+    String status = 'Available';
 
     showDialog(
       context: context,
@@ -105,7 +115,7 @@ class _WorkersState extends State<Workers> {
                   value: status,
                   items: const [
                     DropdownMenuItem(
-                        value: 'available', child: Text('Available')),
+                        value: 'Available', child: Text('Available')),
                     DropdownMenuItem(value: 'inwork', child: Text('In Work')),
                   ],
                   onChanged: (value) => status = value!,
@@ -249,7 +259,7 @@ class _WorkersState extends State<Workers> {
                         width: 80,
                         height: 30,
                         decoration: BoxDecoration(
-                          color: profile["status"] == "available"
+                          color: profile["status"] == "Available"
                               ? Colors.green
                               : Colors.red,
                           borderRadius: BorderRadius.circular(12),
