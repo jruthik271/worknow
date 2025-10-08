@@ -122,6 +122,7 @@ class _MyWidgetState extends State<MyWidget> {
             child: const Text('Cancel'),
           ),
           ElevatedButton(
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.blue.shade50),
             onPressed: () {
               if (formKey.currentState!.validate()) {
                 final newJob = Job(

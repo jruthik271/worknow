@@ -68,11 +68,14 @@ class _WorkersState extends State<Workers> {
     String status = 'Available';
 
     showDialog(
+      
       context: context,
       builder: (context) => AlertDialog(
+        backgroundColor: Colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         title: const Text('Add New Worker'),
         content: SingleChildScrollView(
+          
           child: Form(
             key: formKey,
             child: Column(
@@ -136,6 +139,9 @@ class _WorkersState extends State<Workers> {
             child: const Text('Cancel'),
           ),
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blue.shade50
+            ),
             onPressed: () {
               if (formKey.currentState!.validate()) {
                 setState(() {
